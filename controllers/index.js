@@ -6,7 +6,7 @@ class Controller {
   static async getMovies (req, res, next) {
     try {
       console.log(req.userId, '<-- Ini di getMovies controller')
-      const movies = await Movie.findAl()
+      const movies = await Movie.findAll()
       res.json(movies)
     } catch(err) {
       next(err)
